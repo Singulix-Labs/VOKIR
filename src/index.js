@@ -50,5 +50,5 @@ if (process.env.NODE_ENV === "production") {
     const url = "https://analytics.example.com/metrics"; // Replace with your analytics endpoint
 
     navigator.sendBeacon(url, body);
-  });
+  });  
 }
