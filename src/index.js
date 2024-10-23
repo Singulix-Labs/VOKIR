@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -31,7 +31,9 @@ class ErrorBoundary extends React.Component {
 root.render(
   <React.StrictMode>
     <ErrorBoundary>
-      <App />
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <App />
+      </Suspense>
     </ErrorBoundary>
   </React.StrictMode>
 );
