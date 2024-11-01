@@ -8,6 +8,7 @@
     "framer-motion": "^7.0.0", // Added Framer Motion for animations
     "zustand": "^4.4.0", // Added Zustand for state management
     "react-toastify": "^9.1.3", // Added React Toastify for notifications
-    "dayjs": "^1.10.7" // Added dayjs for date manipulation
+    "dayjs": "^1.10.7", // Added dayjs for date manipulation
+    "react-query": "^3.39.0" // Added React Query for data fetching and caching
   }
 }
