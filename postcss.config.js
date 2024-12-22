@@ -9,8 +9,9 @@ module.exports = {
     "postcss-100vh-fix": {}, // Fixes viewport height inconsistencies on mobile browsers
     "postcss-gap-properties": {}, // Adds support for gap in IE and Edge
     "postcss-custom-media": {}, // Adds custom media queries
-
-    // New addition for logical properties and directional styles
     "postcss-logical": {}, // Enables logical CSS properties for better RTL support
+
+    // New addition for color functions
+    "postcss-color-function": {}, // Enables advanced color manipulation in CSS
   },
 };
