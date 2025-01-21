@@ -49,10 +49,10 @@ module.exports = {
     },
   },
   plugins: [
-    require("@tailwindcss/forms"), // Adds better form styling
     require("@tailwindcss/typography"), // Improves typography styles
     require("@tailwindcss/aspect-ratio"), // Adds aspect-ratio utilities
     require("@tailwindcss/line-clamp"), // Added line-clamp for text truncation
     require("@tailwindcss/animation"), // Added animation plugin for custom animations
   ],
 };
+ 
