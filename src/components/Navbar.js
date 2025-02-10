@@ -10,6 +10,7 @@ export function Navbar() {
           <Link to="/" className="hover:underline">Home</Link>
           <Link to="/about" className="hover:underline">About</Link>
           <Link to="/token" className="hover:underline">Token</Link>
+          <Link to="/token" className="hover:underline">Contact Us</Link>
         </div>
       </div>
     </nav>
