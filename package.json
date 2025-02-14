@@ -6,6 +6,7 @@
       "axios": "^1.3.0", // Added axios for API requests
       "tailwindcss": "^3.0.0", // Added Tailwind CSS for styling
       "framer-motion": "^7.0.0", // Added Framer Motion for animations
-      "zustand": "^4.4.0" // Added Zustand for state management
+      "zustand": "^4.4.0", // Added Zustand for state management
+      "react-toastify": "^9.1.3" // Added React Toastify for notifications
     }
 }
