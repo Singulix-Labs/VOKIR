@@ -12,6 +12,12 @@ export function Token() {
         <li>Reward tokens for users who identify vulnerabilities.</li>
         <li>Community incentives for security participation.</li>
       </ul>
+      <div className="mt-6 p-4 border rounded-lg bg-gray-800">
+        <h3 className="text-xl font-semibold">Token Details</h3>
+        <p><strong>Symbol:</strong> VOK</p>
+        <p><strong>Total Supply:</strong> 100,000,000 VOK</p>
+        <p><strong>Blockchain:</strong> Ethereum (ERC-20)</p>
+      </div>
     </div>
   );
 }
