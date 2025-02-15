@@ -6,14 +6,30 @@ module.exports = {
           primary: "#1D4ED8", // Custom primary color
           secondary: "#9333EA", // Custom secondary color
           accent: "#F59E0B", // Added accent color
+          neutral: {
+            100: "#f5f5f5",
+            200: "#e5e5e5",
+            300: "#d4d4d4",
+            400: "#a3a3a3",
+            500: "#737373",
+            600: "#525252",
+            700: "#404040",
+            800: "#262626",
+            900: "#171717",
+          }, // Added neutral grayscale palette
         },
         fontFamily: {
           sans: ["Inter", "sans-serif"], // Added custom font
           heading: ["Poppins", "sans-serif"], // Added heading font
         },
+        fontSize: {
+          xl: ["1.5rem", { lineHeight: "2rem" }], // Added xl font size for headings
+        },
         spacing: {
           '128': '32rem', // Added extra spacing utility
           '144': '36rem',
+          '160': '40rem',
+          '192': '48rem',
         },
       },
     },
