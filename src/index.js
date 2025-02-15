@@ -12,5 +12,7 @@ root.render(
   </React.StrictMode>
 );
 
-// Measure app performance
-reportWebVitals(console.log);
+// Measure app performance only in development mode
+if (process.env.NODE_ENV === "development") {
+  reportWebVitals(console.log);
+}
