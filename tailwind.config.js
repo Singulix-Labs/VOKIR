@@ -24,6 +24,7 @@ module.exports = {
         },
         fontSize: {
           xl: ["1.5rem", { lineHeight: "2rem" }], // Added xl font size for headings
+          "2xl": ["2rem", { lineHeight: "2.5rem" }], // Added 2xl size for larger headings
         },
         spacing: {
           '128': '32rem', // Added extra spacing utility
@@ -31,11 +32,15 @@ module.exports = {
           '160': '40rem',
           '192': '48rem',
         },
+        borderRadius: {
+          '4xl': '2rem', // Added larger border radius for soft UI
+        },
       },
     },
     plugins: [
       require("@tailwindcss/forms"), // Adds better form styling
       require("@tailwindcss/typography"), // Improves typography styles
       require("@tailwindcss/aspect-ratio"), // Adds aspect-ratio utilities
+      require("@tailwindcss/line-clamp"), // Added line-clamp for text truncation
     ],
 };
