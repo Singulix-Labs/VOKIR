@@ -11,6 +11,15 @@ const Token = lazy(() => import("./pages/Token"));
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound")); // Added NotFound page
 
+function ErrorBoundary({ error }) {
+  return (
+    <div className="text-center p-10">
+      <h1>Something went wrong!</h1>
+      <p>{error.message}</p>
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
@@ -20,11 +29,11 @@ function App() {
         <div className="flex-grow" role="main">
           <Suspense fallback={<div className="text-center p-10">Loading...</div>}>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/token" element={<Token />} />
-              <Route path="/contact" element={<Contact />} /> {/* New Contact Route */}
-              <Route path="*" element={<NotFound />} /> {/* Catch-all Route */}
+              <Route path="/" element={<ErrorBoundary><Home /></ErrorBoundary>} />
+              <Route path="/about" element={<ErrorBoundary><About /></ErrorBoundary>} />
+              <Route path="/token" element={<ErrorBoundary><Token /></ErrorBoundary>} />
+              <Route path="/contact" element={<ErrorBoundary><Contact /></ErrorBoundary>} /> {/* New Contact Route */}
+              <Route path="*" element={<ErrorBoundary><NotFound /></ErrorBoundary>} /> {/* Catch-all Route */}
             </Routes>
           </Suspense>
         </div>
