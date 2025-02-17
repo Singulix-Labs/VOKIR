@@ -20,6 +20,17 @@ function ErrorBoundary({ error }) {
   );
 }
 
+// Added a loading spinner for better user experience during lazy loading
+function LoadingSpinner() {
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <div className="loader" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
@@ -27,7 +38,7 @@ function App() {
       <div className="min-h-screen flex flex-col bg-gray-900 text-white">
         <Navbar role="navigation" />
         <div className="flex-grow" role="main">
-          <Suspense fallback={<div className="text-center p-10">Loading...</div>}>
+          <Suspense fallback={<LoadingSpinner />}> {/* New LoadingSpinner added as fallback */}
             <Routes>
               <Route path="/" element={<ErrorBoundary><Home /></ErrorBoundary>} />
               <Route path="/about" element={<ErrorBoundary><About /></ErrorBoundary>} />
