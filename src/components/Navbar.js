@@ -7,17 +7,20 @@ export function Navbar() {
       <div className="container mx-auto flex justify-between items-center">
         <span className="text-xl font-bold">VOKIR</span>
         <div className="space-x-4">
-          <NavLink to="/" exact className="hover:underline" activeClassName="text-yellow-500">
+          <NavLink to="/" className={({ isActive }) => isActive ? "text-yellow-500 underline" : "hover:underline"}>
             Home
           </NavLink>
-          <NavLink to="/about" className="hover:underline" activeClassName="text-yellow-500">
+          <NavLink to="/about" className={({ isActive }) => isActive ? "text-yellow-500 underline" : "hover:underline"}>
             About
           </NavLink>
-          <NavLink to="/token" className="hover:underline" activeClassName="text-yellow-500">
+          <NavLink to="/token" className={({ isActive }) => isActive ? "text-yellow-500 underline" : "hover:underline"}>
             Token
           </NavLink>
-          <NavLink to="/contact" className="hover:underline" activeClassName="text-yellow-500">
+          <NavLink to="/contact" className={({ isActive }) => isActive ? "text-yellow-500 underline" : "hover:underline"}>
             Contact Us
+          </NavLink>
+          <NavLink to="/features" className={({ isActive }) => isActive ? "text-yellow-500 underline" : "hover:underline"}>
+            Features
           </NavLink>
         </div>
       </div>
