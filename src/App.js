@@ -1,44 +1,20 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { QueryClient, QueryClientProvider } from "react-query"; // Added React Query
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import ScrollToTop from "./components/ScrollToTop"; // Added ScrollToTop component
+import ScrollToTop from "./components/ScrollToTop";
+import { AuthProvider } from "./contexts/AuthContext"; // Added AuthProvider
 
-// Lazy loading pages for performance optimization
+const queryClient = new QueryClient(); // Initializes React Query Client
+
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Token = lazy(() => import("./pages/Token"));
 const Contact = lazy(() => import("./pages/Contact"));
-const NotFound = lazy(() => import("./pages/NotFound")); // Added NotFound page
+const NotFound = lazy(() => import("./pages/NotFound"));
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError() {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error("Error caught by boundary:", error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="text-center p-10">
-          <h1>Something went wrong!</h1>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
-
-// Added a loading spinner for better user experience during lazy loading
 function LoadingSpinner() {
   return (
     <div className="flex justify-center items-center h-screen">
@@ -51,32 +27,33 @@ function LoadingSpinner() {
 
 function App() {
   return (
-    <Router>
-      <Helmet>
-        <title>My React App</title>
-        <meta name="description" content="A modern React app with optimized performance and accessibility." />
-      </Helmet>
-      <ScrollToTop /> {/* Ensures the page scrolls to top on route change */}
-      <div className="min-h-screen flex flex-col bg-gray-900 text-white">
-        <Navbar role="navigation" />
-        <div className="flex-grow" role="main">
-          <Suspense fallback={<LoadingSpinner />}> {/* New LoadingSpinner added as fallback */}
-            <ErrorBoundary>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/token" element={<Token />} />
-                <Route path="/contact" element={<Contact />} /> {/* New Contact Route */}
-                <Route path="*" element={<NotFound />} /> {/* Catch-all Route */}
-              </Routes>
-            </ErrorBoundary>
-          </Suspense>
-        </div>
-        <Footer role="contentinfo" />
-      </div>
-    </Router>
+    <QueryClientProvider client={queryClient}> {/* Wrap app with React Query Provider */}
+      <AuthProvider> {/* Added Auth Context Provider */}
+        <Router>
+          <Helmet>
+            <title>My React App</title>
+            <meta name="description" content="A modern React app with optimized performance and accessibility." />
+          </Helmet>
+          <ScrollToTop />
+          <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+            <Navbar role="navigation" />
+            <div className="flex-grow" role="main">
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/token" element={<Token />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+            </div>
+            <Footer role="contentinfo" />
+          </div>
+        </Router>
+      </AuthProvider>
+    </QueryClientProvider>
   );
 }
 
-export default App; 
- 
+export default App;
