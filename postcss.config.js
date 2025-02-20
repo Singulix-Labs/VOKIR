@@ -7,11 +7,10 @@ module.exports = {
     "postcss-flexbugs-fixes": {}, // Fixes flexbox issues in older browsers
     "postcss-preset-env": { stage: 1 }, // Adds modern CSS features with fallback support
     "postcss-100vh-fix": {}, // Fixes viewport height inconsistencies on mobile browsers
-    "postcss-gap-properties": {}, // Adds support for gap in IE and Edge
     "postcss-custom-media": {}, // Adds custom media queries
     "postcss-logical": {}, // Enables logical CSS properties for better RTL support
-
-    // New addition for color functions
-    "postcss-color-function": {}, // Enables advanced color manipulation in CSS
+    
+    // Replaced deprecated postcss-color-function
+    "postcss-color-mod-function": {}, // Enables advanced color manipulation in CSS
   },
 };
