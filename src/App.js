@@ -6,6 +6,7 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import { AuthProvider } from "./contexts/AuthContext"; // Added AuthProvider
+import { Web3Provider } from "./contexts/Web3Context"; // Added Web3Provider
 
 const queryClient = new QueryClient(); // Initializes React Query Client
 
@@ -29,28 +30,30 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}> {/* Wrap app with React Query Provider */}
       <AuthProvider> {/* Added Auth Context Provider */}
-        <Router>
-          <Helmet>
-            <title>My React App</title>
-            <meta name="description" content="A modern React app with optimized performance and accessibility." />
-          </Helmet>
-          <ScrollToTop />
-          <div className="min-h-screen flex flex-col bg-gray-900 text-white">
-            <Navbar role="navigation" />
-            <div className="flex-grow" role="main">
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/token" element={<Token />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </Suspense>
+        <Web3Provider> {/* Added Web3 Context Provider */}
+          <Router>
+            <Helmet>
+              <title>My React App</title>
+              <meta name="description" content="A modern React app with optimized performance and accessibility." />
+            </Helmet>
+            <ScrollToTop />
+            <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+              <Navbar role="navigation" />
+              <div className="flex-grow" role="main">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/token" element={<Token />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </Suspense>
+              </div>
+              <Footer role="contentinfo" />
             </div>
-            <Footer role="contentinfo" />
-          </div>
-        </Router>
+          </Router>
+        </Web3Provider>
       </AuthProvider>
     </QueryClientProvider>
   );
