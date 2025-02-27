@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals"; // Added performance monitoring
+import { Web3Provider } from "./contexts/Web3Context"; // Added Web3 provider
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -32,7 +33,9 @@ root.render(
   <React.StrictMode>
     <ErrorBoundary>
       <Suspense fallback={<h1>Loading...</h1>}>
-        <App />
+        <Web3Provider> {/* Wrapped App with Web3Provider */}
+          <App />
+        </Web3Provider>
       </Suspense>
     </ErrorBoundary>
   </React.StrictMode>
