@@ -12,5 +12,8 @@ module.exports = {
     
     // Replaced deprecated postcss-color-function
     "postcss-color-mod-function": {}, // Enables advanced color manipulation in CSS
+    
+    // New addition
+    "postcss-sort-media-queries": {}, // Optimizes media query ordering for performance
   },
 };
