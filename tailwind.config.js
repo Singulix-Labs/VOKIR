@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx,html,mdx}"], // Added Markdown support
+  content: ["./src/**/*.{js,jsx,ts,tsx,html,mdx}"],
   theme: {
     extend: {
       colors: {
@@ -52,6 +52,6 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/line-clamp"),
-    require("@tailwindcss/forms"), // Improved form styling
+    require("@tailwindcss/forms"),
   ],
 };
