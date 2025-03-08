@@ -45,6 +45,7 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(var(--tw-gradient-stops))",
+        "custom-gradient": "linear-gradient(to right, #ff7e5f, #feb47b)", // Added custom gradient
       },
     },
   },
