@@ -17,6 +17,11 @@ module.exports = {
           800: "#262626",
           900: "#171717",
         },
+        button: {
+          default: "#1D4ED8",
+          hover: "#9333EA", // Added hover color for buttons
+          focus: "#F59E0B", // Added focus color for buttons
+        },
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
@@ -45,7 +50,6 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(var(--tw-gradient-stops))",
-        "custom-gradient": "linear-gradient(to right, #ff7e5f, #feb47b)", // Added custom gradient
       },
     },
   },
