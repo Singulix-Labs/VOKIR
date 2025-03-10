@@ -19,8 +19,8 @@ module.exports = {
         },
         button: {
           default: "#1D4ED8",
-          hover: "#9333EA", // Added hover color for buttons
-          focus: "#F59E0B", // Added focus color for buttons
+          hover: "#9333EA",
+          focus: "#F59E0B",
         },
       },
       fontFamily: {
@@ -50,6 +50,12 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(var(--tw-gradient-stops))",
+      },
+      transitionDuration: {
+        0: "0ms",
+        150: "150ms", // Added custom duration for faster animations
+        300: "300ms", // Added custom duration for slower animations
+        500: "500ms", // Added custom duration for smooth transitions
       },
     },
   },
