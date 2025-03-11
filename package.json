@@ -10,14 +10,6 @@
     "react-toastify": "^9.1.3",
     "dayjs": "^1.10.7",
     "react-query": "^3.39.0",
-    "clsx": "^1.2.1",
-
-    // New additions
-    "react-hook-form": "^7.43.0", // Added for form handling
-    "yup": "^1.0.0", // Added for form validation
-    "lodash": "^4.17.21", // Added for utility functions
-    "@heroicons/react": "^2.0.18", // Added for UI icons
-    "react-hot-toast": "^2.4.0", // Added for enhanced toast notifications
-    "date-fns": "^2.29.3" // Added for better date manipulation
+    "clsx": "^1.2.1"
   }
 }
