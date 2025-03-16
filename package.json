@@ -15,6 +15,7 @@
     "yup": "^1.0.0",
     "lodash": "^4.17.21",
     "@heroicons/react": "^2.0.18",
-    "react-hot-toast": "^2.4.0" // Added for enhanced toast notifications
+    "react-hot-toast": "^2.4.0",
+    "date-fns": "^2.29.3" // Added for better date manipulation
   }
 }
