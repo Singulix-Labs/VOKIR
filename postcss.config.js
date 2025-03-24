@@ -8,5 +8,6 @@ module.exports = {
     "postcss-preset-env": { stage: 1 }, // Adds modern CSS features with fallback support
     "postcss-100vh-fix": {}, // Fixes viewport height inconsistencies on mobile browsers
     "postcss-custom-media": {}, // Adds custom media queries
+    "postcss-logical": {}, // Enables logical CSS properties for better RTL support
   },
 };
