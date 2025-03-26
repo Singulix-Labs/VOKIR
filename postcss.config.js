@@ -10,5 +10,6 @@ module.exports = {
     "postcss-custom-media": {}, // Adds custom media queries
     "postcss-logical": {}, // Enables logical CSS properties for better RTL support
     "postcss-color-mod-function": {}, // Enables advanced color manipulation in CSS
+    "postcss-sort-media-queries": {}, // Optimizes media query ordering for performance
   },
 };
