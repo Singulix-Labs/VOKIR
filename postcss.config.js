@@ -11,11 +11,5 @@ module.exports = {
     "postcss-logical": {}, // Enables logical CSS properties for better RTL support
     "postcss-color-mod-function": {}, // Enables advanced color manipulation in CSS
     "postcss-sort-media-queries": {}, // Optimizes media query ordering for performance
-    "postcss-advanced-variables": {}, // Adds support for more complex CSS variables
-    "postcss-combine-duplicated-selectors": {}, // Combines duplicated selectors to reduce file size
-    "postcss-clean": {}, // Final cleanup plugin for CSS file optimization
-    "postcss-purgecss": { // Adds purge feature to remove unused CSS
-      content: ["./src/**/*.{html,js,jsx,ts,tsx}"]
-    }
   },
 };
