@@ -5,7 +5,11 @@
     "react-router-dom": "^6.0.0",
     "axios": "^1.3.0",
     "tailwindcss": "^3.0.0",
-    "framer-motion": "^7.0.0", // Added for smooth animations
-    "zustand": "^4.4.0" // Added for state management
+    "framer-motion": "^7.0.0",
+    "zustand": "^4.4.0",
+    "react-toastify": "^9.1.3", // Added for notifications
+    "dayjs": "^1.10.7", // Added for date formatting
+    "react-hook-form": "^7.43.0", // Added for form handling
+    "yup": "^1.0.0" // Added for form validation
   }
 }
