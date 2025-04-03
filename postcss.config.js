@@ -17,5 +17,6 @@ module.exports = {
     "postcss-purgecss": { // Adds purge feature to remove unused CSS
       content: ["./src/**/*.{html,js,jsx,ts,tsx}"]
     },
+    "postcss-sorting": {}, // Sorts CSS properties to maintain consistent order
   },
 };
