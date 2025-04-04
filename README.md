@@ -1,5 +1,5 @@
 # VOKIR - Decentralized AI Security Auditor
-![Singulix Labs Banner](https://github.com/Singulix-Labs/VOKIR/blob/299b19f1a2f783da73143ddad5928999bb3e18f4/vokir_banner.png)
+![Singulix Labs Banner](https://github.com/Singulix-Labs/VOKIR/blob/main/vokir_banner.png)
 
 
 ## 🔐 Overview
