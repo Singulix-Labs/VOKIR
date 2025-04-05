@@ -9,8 +9,12 @@
     "zustand": "^4.4.0",
     "react-toastify": "^9.1.3",
     "dayjs": "^1.10.7",
-    "react-query": "^3.39.0", // Added for data fetching
-    "clsx": "^1.2.1", // Added for conditional class names
-    "@heroicons/react": "^2.0.18" // Added for UI icons
+    "react-query": "^3.39.0",
+    "clsx": "^1.2.1",
+    "react-hook-form": "^7.43.0",
+    "yup": "^1.0.0",
+    "lodash": "^4.17.21", // Added for utility functions
+    "react-hot-toast": "^2.4.0", // Added for enhanced toast notifications
+    "date-fns": "^2.29.3" // Added for better date manipulation
   }
 }
