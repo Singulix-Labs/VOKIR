@@ -22,10 +22,27 @@ module.exports = {
         sans: ["Inter", "sans-serif"],
         heading: ["Poppins", "sans-serif"],
       },
+      fontSize: {
+        xl: ["1.5rem", { lineHeight: "2rem" }],
+        "2xl": ["2rem", { lineHeight: "2.5rem" }],
+      },
+      spacing: {
+        "128": "32rem",
+        "144": "36rem",
+        "160": "40rem",
+        "192": "48rem",
+        "208": "52rem",
+        "224": "56rem",
+      },
+      borderRadius: {
+        "4xl": "2rem",
+        "5xl": "2.5rem",
+      },
     },
   },
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/line-clamp"),
   ],
 };
