@@ -17,6 +17,11 @@ module.exports = {
           800: "#262626",
           900: "#171717",
         },
+        button: {
+          default: "#1D4ED8",
+          hover: "#9333EA",
+          focus: "#F59E0B",
+        },
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
@@ -38,11 +43,20 @@ module.exports = {
         "4xl": "2rem",
         "5xl": "2.5rem",
       },
+      transitionTimingFunction: {
+        "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
+        "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(var(--tw-gradient-stops))",
+      },
     },
   },
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/forms"),
   ],
 };
