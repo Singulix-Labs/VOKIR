@@ -42,6 +42,7 @@ module.exports = {
       borderRadius: {
         "4xl": "2rem",
         "5xl": "2.5rem",
+        "6xl": "3rem", // Added extra-large border radius
       },
       transitionTimingFunction: {
         "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
