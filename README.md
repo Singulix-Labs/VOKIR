@@ -81,6 +81,6 @@ Ensure you have the following installed on your system:
 - Security analytics dashboard integration.
 
 ## 📢 Join the VOKIR Community
-🔗 [Website](#) | 💬 [Discord](#) | 🐦 [Twitter](#) | 📄 [Docs](#)
+🔗 [Website](https://www.vokir.live/) | 🐦 [Twitter](https://x.com/singulix_labs) | 📄 [Docs](https://ai-docs-2.gitbook.io/vokir-documentation)
 
 **Secure Your Smart Contracts with VOKIR! 🚀**
