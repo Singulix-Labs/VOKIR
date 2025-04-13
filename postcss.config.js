@@ -18,5 +18,10 @@ module.exports = {
       content: ["./src/**/*.{html,js,jsx,ts,tsx}"]
     },
     "postcss-sorting": {}, // Sorts CSS properties to maintain consistent order
+    "postcss-flexbugs-fixes": {}, // Fixes flexbox bugs across browsers
+    "postcss-advanced-variables": {}, // Supports advanced CSS variables for more complex design needs
+    "postcss-easy-import": {}, // Simplifies CSS imports, improving maintainability
+    "postcss-custom-media-queries": {}, // Adds support for custom media queries for responsive design
+    "postcss-optimize": {}, // Optimizes CSS for better performance
   },
 };
