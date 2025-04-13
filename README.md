@@ -20,8 +20,8 @@ VOKIR provides an **automated, cost-effective, and community-driven approach** t
 - 💰 **Cost-Effective** – Making smart contract security accessible to all projects.
 - 🎟 **Governance & Staking** – Community-driven decision-making and token rewards.
 
-## 💎 Token Utility ($VKR)
-VOKIR's native token, **$VKR**, plays a crucial role in the ecosystem:
+## 💎 Token Utility ($SINGULIX)
+VOKIR's native token, **$SINGULIX**, plays a crucial role in the ecosystem:
 - **📜 Pay-Per-Audit Model** – Users pay in $VKR for smart contract audits.
 - **🎯 Bug Bounty Rewards** – Community members earn $VKR for identifying vulnerabilities.
 - **💸 Staking & Governance** – Holders can stake tokens and vote on protocol upgrades.
