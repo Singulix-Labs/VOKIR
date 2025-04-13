@@ -4,12 +4,14 @@ import { Helmet } from "react-helmet";
 import { QueryClient, QueryClientProvider } from "react-query"; // Added React Query
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop"; 
 import { AuthProvider } from "./contexts/AuthContext"; // Added AuthProvider
 import { Web3Provider } from "./contexts/Web3Context"; // Added Web3Provider
 
-const queryClient = new QueryClient(); // Initializes React Query Client
+// Initialize React Query client for server-side state management
+const queryClient = new QueryClient(); 
 
+// Lazy-loaded pages for performance optimization
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Token = lazy(() => import("./pages/Token"));
@@ -33,10 +35,10 @@ function App() {
         <Web3Provider> {/* Added Web3 Context Provider */}
           <Router>
             <Helmet>
-              <title>My React App</title>
+              <title>Fixify</title> {/* Changed to Fixify */}
               <meta name="description" content="A modern React app with optimized performance and accessibility." />
             </Helmet>
-            <ScrollToTop />
+            <ScrollToTop /> {/* Ensures the page scrolls to top on route change */}
             <div className="min-h-screen flex flex-col bg-gray-900 text-white">
               <Navbar role="navigation" />
               <div className="flex-grow" role="main">
