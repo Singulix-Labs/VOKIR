@@ -53,5 +53,14 @@ if (process.env.NODE_ENV === "production") {
     const url = "https://analytics.example.com/metrics"; // Replace with your analytics endpoint
 
     navigator.sendBeacon(url, body);
-  });  
+  });
+
+  // Added a log to track analytics status
+  console.log("Sending performance metrics to analytics endpoint...");
+  
+  // Example of adding Google Analytics event tracking in production
+  window.gtag('event', 'page_view', {
+    page_location: window.location.href,
+    page_title: document.title,
+  });
 }
