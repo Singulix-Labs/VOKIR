@@ -53,6 +53,16 @@ module.exports = {
         150: "150ms", // Added custom duration for faster animations
         300: "300ms", // Added custom duration for slower animations
         500: "500ms", // Added custom duration for smooth transitions
+        700: "700ms", // Added custom duration for a more gradual effect
+      },
+      boxShadow: {
+        "3xl": "0 10px 30px rgba(0, 0, 0, 0.1)", // Added custom shadow for deep cards
+        "4xl": "0 20px 50px rgba(0, 0, 0, 0.15)", // Added stronger shadow for modals
+      },
+      maxWidth: {
+        "screen-sm": "640px", // Added custom max-width for small screen containers
+        "screen-md": "768px", // Added max-width for medium screen containers
+        "screen-lg": "1024px", // Added max-width for large screen containers
       },
     },
   },
